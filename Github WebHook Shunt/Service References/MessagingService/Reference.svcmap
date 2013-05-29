@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e4973620-1c81-405a-b1ba-ceb55cda2a9c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ArrayList" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8081/SpikeLite/Messaging" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MessagingService.wsdl" MetadataType="Wsdl" ID="87cb06bb-2c55-4e8f-bf27-179593c782fb" SourceId="1" SourceUrl="http://localhost:8081/SpikeLite/Messaging?wsdl" />
+    <MetadataFile FileName="Messaging.disco" MetadataType="Disco" ID="f6a1b30d-f1a7-49ab-b7d0-52ba585984b6" SourceId="1" SourceUrl="http://localhost:8081/SpikeLite/Messaging?disco" />
+    <MetadataFile FileName="Messaging.wsdl" MetadataType="Wsdl" ID="d000ca8e-6ed6-4196-b618-64ef97a6816f" SourceId="1" SourceUrl="http://localhost:8081/SpikeLite/Messaging?wsdl=wsdl0" />
+    <MetadataFile FileName="Messaging.xsd" MetadataType="Schema" ID="da887d06-eca6-4f17-a435-1f5c1eadab97" SourceId="1" SourceUrl="http://localhost:8081/SpikeLite/Messaging?xsd=xsd0" />
+    <MetadataFile FileName="Messaging1.xsd" MetadataType="Schema" ID="2281435b-871f-438d-a88f-eba3dd7a3238" SourceId="1" SourceUrl="http://localhost:8081/SpikeLite/Messaging?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

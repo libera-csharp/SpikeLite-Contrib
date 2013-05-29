@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Github WebHook Shunt", "Github WebHook Shunt.csproj", "{C96699A5-07AF-434A-8D4E-15FB8D0FC281}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4B8B5ABE-596E-4B75-A485-8B90681707BA}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C96699A5-07AF-434A-8D4E-15FB8D0FC281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96699A5-07AF-434A-8D4E-15FB8D0FC281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96699A5-07AF-434A-8D4E-15FB8D0FC281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96699A5-07AF-434A-8D4E-15FB8D0FC281}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
