@@ -116,11 +116,10 @@ namespace Github_WebHook_Shunt
                 var authorName = commit["author"]["name"].Value<String>();
                 var hash = commit["id"].Value<String>().Substring(0, 7);
                 var message = commit["message"].Value<String>();
-                var files = commit["modified"];
                 var url = ShortenUrl(string.Format("{0}/commit/{1}", repoPrefix, hash));
 
-                var botMessage = String.Format("{0}: {1} {2} * {3} / {4}: {5} - {6}", repoName, authorName, branch, hash, ConcatFiles(files), message, url);
-                SendMessage(botMessage);
+                var botMessage = String.Format("{0}: {1} {2} * {3} / {4}: {5} - {6}", repoName, authorName, branch, hash, FormatFiles(commit), message, url);
+                SendMessage(botMessage.Replace("\n", ""));
             }
 
             Log.Info(string.Format("Commit: {0}", payload));
@@ -163,25 +162,37 @@ namespace Github_WebHook_Shunt
             }            
         }
 
+        /// <summary>
+        /// Attempts to gather all the adds/removals/updates into a coherent format that looks like the CIA.vc output as described in the file header.
+        /// </summary>
+        /// 
+        /// <param name="commit">The JSON blob of our commit message.</param>
+        /// 
+        /// <returns>A formatted string of commit information, fit for display.</returns>
+        private static string FormatFiles(JToken commit)
+        {
+            return ConcatFiles(commit["added"].Values<string>().Concat(commit["removed"].Values<string>())
+                                                               .Concat(commit["modified"].Values<string>()).ToList());
+        }
+
         /// <remarks>
         /// This was more or less reverse engineered from messages sent via the CIA.vc service. There seem to be three cases: singular files (where the literal
         /// filename is passed), multiple files in the same dir (N files committed) and multiple files in multiple dirs (N files in M dirs committed). There are
         /// probably more that should be added, but this is just a cheap hack anyway...
         /// </remarks>
-        private static string ConcatFiles(JToken files)
+        private static string ConcatFiles(List<String> files)
         {
             if (files.Count() == 1)
             {
-                return files.First.Value<String>();
+                return files.First();
             }
 
             var directories = new HashSet<string>();
 
             foreach (var file in files)
             {
-                var path = file.Value<String>();
-                var index = path.LastIndexOf("/", StringComparison.Ordinal);
-                directories.Add(index > -1 ? path.Substring(0, index) : "/");
+                var index = file.LastIndexOf("/", StringComparison.Ordinal);
+                directories.Add(index > -1 ? file.Substring(0, index) : "/");
             }
 
             return String.Format("({0} files{1})", files.Count(), (directories.Count > 1) ? string.Format(" in {0} dirs", directories.Count) : "");
