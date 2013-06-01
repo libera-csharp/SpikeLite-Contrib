@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Github_WebHook_Shunt.MessagingService {
+namespace WebHookSupport.MessagingService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -23,12 +23,12 @@ namespace Github_WebHook_Shunt.MessagingService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IMessagingServiceChannel : Github_WebHook_Shunt.MessagingService.IMessagingService, System.ServiceModel.IClientChannel {
+    public interface IMessagingServiceChannel : WebHookSupport.MessagingService.IMessagingService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class MessagingServiceClient : System.ServiceModel.ClientBase<Github_WebHook_Shunt.MessagingService.IMessagingService>, Github_WebHook_Shunt.MessagingService.IMessagingService {
+    public partial class MessagingServiceClient : System.ServiceModel.ClientBase<WebHookSupport.MessagingService.IMessagingService>, WebHookSupport.MessagingService.IMessagingService {
         
         public MessagingServiceClient() {
         }

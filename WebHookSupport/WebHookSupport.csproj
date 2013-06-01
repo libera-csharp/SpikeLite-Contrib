@@ -7,8 +7,8 @@
     <ProjectGuid>{C96699A5-07AF-434A-8D4E-15FB8D0FC281}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Github_WebHook_Shunt</RootNamespace>
-    <AssemblyName>Github WebHook Shunt</AssemblyName>
+    <RootNamespace>WebHookSupport</RootNamespace>
+    <AssemblyName>WebHookSupport</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>

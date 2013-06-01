@@ -16,12 +16,12 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Github_WebHook_Shunt.MessagingService;
+using WebHookSupport.MessagingService;
 using Newtonsoft.Json.Linq;
 using log4net;
 using System.Linq;
 
-namespace Github_WebHook_Shunt
+namespace WebHookSupport
 {
     /// <summary>
     /// Replicates some of the functionality we used to get from our CIA.vc instance. This is (hopefully) temporary and uses a crude shunt to parse messages and then pass 
