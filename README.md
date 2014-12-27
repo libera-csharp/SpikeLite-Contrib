@@ -5,4 +5,4 @@ The SpikeLite-Contrib repo contains various odds and ends that are related to th
 
 The current modules are:
 
-* WebHookSupport - provides something that parses GitHub Webhook posts and converts them into something that resembles CIA.vc notices, using the bot's WCF-based IPC.
+* WebHookSupport - provides something that parses GitHub Webhook posts and converts them into something that resembles CIA.vc notices, using the bot's WCF-based IPC ![Build Status](https://travis-ci.org/Freenode-Csharp/SpikeLite-Contrib.svg?branch=master).
