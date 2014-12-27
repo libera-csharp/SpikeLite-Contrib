@@ -1,0 +1,6 @@
+language: csharp
+solution: WebHookSupport.sln
+install:
+  - nuget restore WebHookSupport.sln
+script:
+  - xbuild WebHookSupport.sln /target:Rebuild /p:Configuration=release /p:PlatformTarget=x86
