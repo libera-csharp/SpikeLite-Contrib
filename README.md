@@ -1,3 +1,6 @@
+# DEPRECATION NOTICE
+SpikeLite has been deprecated in favor of [SpikeCore](https://github.com/Freenode-Csharp/SpikeCore). You may continue to use SpikeLite, but this repository has been archived and no more updates are forthcoming. 
+
 SpikeLite-Contrib
 =================
 
